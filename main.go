@@ -68,7 +68,7 @@ func main() {
 		if parts := strings.SplitN(metadata, ": ", 2); parts[0] == "Playing" {
 			status = &gateway.CustomUserStatus{
 				EmojiName: "🎵",
-				Text:      parts[1],
+				Text:      "Listening to " + parts[1],
 				ExpiresAt: discord.NewTimestamp(time.Now().Add(ActivityAge)),
 			}
 		}
